@@ -1,0 +1,417 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #215583;
+    /* #5da2d5; */
+    /* font-size: 18px; */
+    font-family: 'Montserrat', sans-serif;
+    margin: 3em;
+    padding: 0;
+}
+
+.background-color {
+    background: linear-gradient(
+        to right,
+        #215583 0%,
+        #215583 50%,
+        #5da2d5 50%,
+        #5da2d5 100%);
+    /* text-align: center; */
+}
+
+/* dark blue color #0041b9 */
+
+/* .container {
+    padding: 2em;
+} */
+
+.container img {
+    stroke: #5da2d5;
+    stroke-width: .2em;
+}
+
+h1{
+    font-size: 3.25em;
+    color: #eefbfb;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+    margin-bottom: .5em;
+    margin-top: .5em;
+    text-shadow: .03em .05em #5da2d5;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #eefbfb;
+    transition: font-size 2s ease;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h3 {
+    font-size: 1em;
+    color: #eefbfb;
+    line-height: 1.15;
+    font-weight: normal;
+}
+
+
+h4 {
+    /* font-size: 16px; */
+    color: #FFF;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: .5em;
+}
+
+p {
+    color: #eefbfb;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.15;
+    margin: .5em;
+}
+
+ul, li {
+    line-height: 1.35;
+    color: #eefbfb;
+    margin-left: 1em;
+}
+
+*:focus {
+    border: 2px solid;
+}
+
+a {
+    color: #eefbfb;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #FFF; /* change visited color */
+}
+
+a.connect:visited {
+    color: #FFF; /* change visited color ?? */
+}
+
+/* Nav container */
+nav{
+    display: flex;
+    justify-content: flex-end;
+    color: #eefbfb;
+    margin: .5em;
+    background: transparent;
+}
+  
+/* Links inside the navbar */
+nav a {
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    color: #5da2d5;
+    text-decoration: none;
+}
+
+/* sidebar */
+
+/* current page */
+nav a.current::after {
+    /* text-decoration: underline; */
+    content: " ✩";
+}
+
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0; /* this is what put the sidebar on the right!! */
+    background-color: #eefbfb; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    align-items: right; /* ??? doesnt work--want sidebar on right!*/
+}
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #215583;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #5da2d5;
+  }
+  
+  .sidebar a:current {  /* trying to indicate current page!--bad selector */
+    text-decoration: underline;
+  }
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+
+/* end sidebar  */
+
+/* ?? vv */
+img{
+    object-fit: fill;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.sticky_name {
+    text-align: left;
+}
+
+.selfie {
+    display: block;
+    margin: auto;
+}
+
+
+footer {
+    background-color: transparent;
+    position: static; /* CENTER ! */
+    text-align: center;
+    /* stick to bottom! ? !!!! */
+    color: #eefbfb;
+    font-size: .75em;
+}
+
+/* About page */
+
+.hobbies h3 {
+    font-weight: bold;
+    margin-bottom: 1em;
+} /* align evenly ! */
+/* why doesn't this work on the Gallery header? */
+
+.hobbies li {
+    display: inline;
+}
+
+.gallery {
+    display: grid;
+    width: 200px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(9, auto);
+    align-items: center;
+    justify-content: center;
+    row-gap: .1em;
+    margin: 1em;
+}
+
+#pic1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    overflow: hidden;
+}
+
+#pic2 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    overflow: hidden;
+}
+
+#pic3 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    overflow: hidden;
+}
+
+#pic4 {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+    overflow: hidden;
+}
+
+#pic5 {
+    grid-column: 1 / -1;
+    grid-row: 5 / span 1;
+    overflow: hidden;
+}
+
+#pic6 {
+    grid-column: 1 / span 1;
+    grid-row: 6 / span 1;
+    overflow: hidden;
+}
+
+#pic7 { 
+    grid-column: 2 / span 1;
+    grid-row: 7 / span 1;
+    overflow: hidden;
+}
+
+#pic8 {
+    grid-column: 1 / span 1;
+    grid-row: 8 / span 1;
+    overflow: hidden;
+}
+
+#pic9 {
+    grid-column: 2 / span 1;
+    grid-row: 9 / span 1;
+    overflow: hidden;
+}
+
+
+/* Work page */
+
+.work_page {
+    margin: 2em;
+}
+
+.experience h3, .skills h3 {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+/* p.experience {
+    margin: 1em;
+} */
+/* ^^ doesnt work? */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(5, auto);
+}
+
+#title1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#l1-1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#l1-2 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+#l1-3 {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+#l1-4 {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+}
+
+#l1-5 {
+    grid-column: 1 / span 1;
+    grid-row: 6 / span 1;
+}
+
+#title2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#l2-1 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#l2-2 {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+}
+
+#l2-3 {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+}
+
+#l2-4 {
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+}
+
+/* Contact page */
+
+label {
+    display: none;
+}
+
+.form {
+    display: flex;
+    margin: 0 auto;
+    border-radius: 4px;
+    align-items: center;
+    /* flex-basis: 1em; */
+    /* flex-grow: 4; */
+    margin-left: 10px;
+}
+
+#name, #email, textarea, #submit {
+    font-family: 'Montserrat', sans-serif;
+    width: 15em;
+}
+
+.connect {
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+
+/* from HW 6 vvv  -- want to expand nav (no buttons) on desktop view (will underline the current page!) */
+@media screen and (min-width: 850px) {
+
+    header {
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: space-between;
+    }
+
+    
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: center;  /* why is this not working */
+    }
+
+}
